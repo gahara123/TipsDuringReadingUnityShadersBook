@@ -44,7 +44,7 @@ $` v_{clip}.w = \frac{1,0}{(M_{vp}^{-1}*v_{ndc}).w} `$&emsp;&emsp;&emsp;&emsp;(7
 <br/>
 将公式(7)带入公式(5)，则有  
 <br/>
-$` v_{world} = \frac{M_{vp}^{-1}*v_{ndc}}{(M_{vp}^{-1}*v_{ndc}).w`$  
+$` v_{world} = \frac{M_{vp}^{-1}*v_{ndc}}{(M_{vp}^{-1}*v_{ndc}).w}`$  
 <br/>
 且由公式(3)，则可知上文H为$` v_{ndc} `$,D为$`{(M_{vp}^{-1}*v_{ndc})} `$,则世界坐标可由D / D.w得到
 
