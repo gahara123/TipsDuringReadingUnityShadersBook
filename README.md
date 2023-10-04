@@ -36,11 +36,11 @@ $` v_{world} = M_{vp}^{-1}*v_{ndc}*v_{clip}.w`$&emsp;&emsp;&emsp;&emsp;(5)
 <br/>
 在公式(5)中，$`M_{vp}^{-1} `$由`_CurrentViewProjectionInverseMatrix`提供，$` v_{ndc} `$由$`d`$得到，$`v_{world}.w=1.0`$，则有  
 <br/>
-$` v_{world}.w = (M_{vp}^{-1}*v_{ndc}).w*v_{clip}.w = 1.0`$&emsp;&emsp;&emsp;&emsp;(6)
+$` v_{world}.w = (M_{vp}^{-1}*v_{ndc}).w*v_{clip}.w = 1.0`$&emsp;&emsp;&emsp;&emsp;(6)  
 <br/>
-由公式(5)可得
+由公式(5)可得  
 <br/>
-$` v_{clip}.w = \frac{1,0}{(M_{vp}^{-1}*v_{ndc}).w} `$&emsp;&emsp;&emsp;&emsp;(7)
+$` v_{clip}.w = \frac{1,0}{(M_{vp}^{-1}*v_{ndc}).w} `$&emsp;&emsp;&emsp;&emsp;(7)  
 <br/>
 将公式(7)带入公式(5)，则有  
 <br/>
