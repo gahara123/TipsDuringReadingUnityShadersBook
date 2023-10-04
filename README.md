@@ -18,7 +18,7 @@ float4 worldPos = D / D.w;
 <br/>
 $` v_{clip} = M_{proj}*M_{view}*v_{world}`$&emsp;&emsp;&emsp;&emsp;(1)  
 <br/>
-其中，$` v_{clip} `$表示P在裁剪空间中的坐标，$`M_{view} `$表示视角矩阵，$`M_{proj} `$表示投影矩阵，将上述两个矩阵相乘得到当前的观察投影矩阵$`M_{vp} `$表示观察矩阵，则有  
+其中，$` v_{clip} `$表示P在裁剪空间中的坐标，$`M_{view} `$表示视角矩阵，$`M_{proj} `$表示投影矩阵，将上述两个矩阵相乘得到当前的观察投影矩阵$`M_{vp} `$，则有  
 <br/>
 $` v_{world} = M_{vp}^{-1}*v_{clip}`$&emsp;&emsp;&emsp;&emsp;(2)  
 <br/>
@@ -34,7 +34,7 @@ $` v_{ndc} = v_{clip}/v_{clip}.w`$&emsp;&emsp;&emsp;&emsp;(4)
 <br/>
 $` v_{world} = M_{vp}^{-1}*v_{ndc}*v_{clip}.w`$&emsp;&emsp;&emsp;&emsp;(5)  
 <br/>
-在公式(5)中，$`M_{vp}^{-1} `$由`_CurrentViewProjectionInverseMatrix`提供，$` v_{ndc} `$由$`d`$得到，$`v_{world}.w=1.0`$，则有  
+在公式(5)中，$`M_{vp}^{-1} `$由`_CurrentViewProjectionInverseMatrix`提供，$` v_{ndc} `$由$` v_{ndc} = d*2-1`$得到，因为$`v_{world}.w=1.0`$，则有  
 <br/>
 $` v_{world}.w = (M_{vp}^{-1}*v_{ndc}).w*v_{clip}.w = 1.0`$&emsp;&emsp;&emsp;&emsp;(6)  
 <br/>
